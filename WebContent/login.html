@@ -1,0 +1,47 @@
+<html>
+<title>LOGIN</title>
+
+<head>
+<link rel="stylesheet" type="text/css" href="css/loginstyle.css">
+	<script>
+		function validate(){
+			if(document.Login.username.value==""){
+				alert("Enter your userName");
+				document.Login.username.focus();
+				return false;
+			}
+			if(document.Login.password.value==""){
+				alert("Enter your password");
+				document.Login.password.focus();
+				return false;
+			}
+			
+			
+			document.Login.submit();
+		}
+	</script>
+</head>
+<body>
+
+<h1>KSEB Login</h1>
+<div class="login">
+<form name="Login" method="get" action="login">
+
+	<label>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<input type="text" name="username" placeholder="Enter Username"/><br><br>
+	<label>Password</label>
+		<input type="text" name="password" placeholder="Enter Password"/><br><br>
+	<label>UserType</label>
+		<select name="usertype" id="usertype">
+			<option value="Administrator">Administrator</option>
+			<option value="LineMan">LineMan</option>
+			<option value="ExcecutiveEngineer">Excecutive Engineer</option>
+			<option value="MaterialDepoManager">MaterialDepoManager</option>
+		</select><br><br>
+		
+		<input type="submit" value="Login" onClick="return validate()"> 
+</form>
+</div>
+
+</body>
+</html>
